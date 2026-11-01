@@ -40,7 +40,9 @@
     .opening-offer strong { font-family: var(--serif); font-size: 18px; font-weight: 600; }
     .opening-offer a { padding-bottom: 2px; border-bottom: 1px solid currentColor; }
     .nav { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-    .brand { display: inline-flex; align-items: center; flex-shrink: 0; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
+    .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; overflow: hidden; border: 1px solid rgba(212, 175, 55, .55); background: var(--black); }
+    .brand-mark img { width: 100%; height: 100%; object-fit: contain; transform: scale(1.7); filter: sepia(1) saturate(3) hue-rotate(3deg) contrast(1.05); mix-blend-mode: screen; }
     .brand-name { font-family: var(--serif); font-size: 19px; line-height: 1; letter-spacing: .3px; }
     .brand-name small { display: block; margin-top: 5px; font-family: var(--sans); font-size: 8px; font-weight: 600; letter-spacing: 2.2px; }
     .nav-links { display: flex; align-items: center; gap: clamp(20px, 3.2vw, 45px); color: var(--muted); font-size: 13px; }
@@ -179,6 +181,7 @@
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="index.html#home" aria-label="Be Perfect Clinic home">
+        <span class="brand-mark" aria-hidden="true"><img src="pp,504x498-pad,600x600,f8f8f8.jpg" alt=""></span>
         <span class="brand-name">Be Perfect<small>CLINIC</small></span>
       </a>
       <nav class="nav-links" id="site-navigation" aria-label="Main navigation">
@@ -302,6 +305,7 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <a class="brand" href="index.html#home" aria-label="Be Perfect Clinic home">
+        <span class="brand-mark" aria-hidden="true"><img src="pp,504x498-pad,600x600,f8f8f8.jpg" alt=""></span>
         <span class="brand-name">Be Perfect<small>CLINIC</small></span>
       </a>
       <span class="footer-meta">Cosmetic care · Dubai, UAE</span>
