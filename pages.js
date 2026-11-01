@@ -15,12 +15,3 @@ navigation.addEventListener('click', (event) => {
     menuButton.setAttribute('aria-label', 'Open menu');
   }
 });
-
-const consultationForm = document.querySelector('#consultation-form');
-if (consultationForm) {
-  consultationForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const name = document.querySelector('#name').value.trim();
-    document.querySelector('#form-status').textContent = `Thank you, ${name}. This preview form does not send your request.`;
-  });
-}

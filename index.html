@@ -110,7 +110,6 @@
     .field input:focus, .field select:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(201, 168, 93, .2); }
     .form-submit { min-height: 51px; justify-self: start; border: 0; cursor: pointer; }
     .form-note { grid-column: 1 / -1; margin: -7px 0 0; color: var(--muted); font-size: 10px; }
-    .form-status { grid-column: 1 / -1; min-height: 22px; margin: 0; color: var(--accent); font-size: 12px; }
 
     .site-footer { background: var(--black); color: var(--ink); }
     .footer-inner { min-height: 104px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
@@ -171,7 +170,7 @@
     }
     @media (max-width: 390px) {
       .booking-form { grid-template-columns: 1fr; }
-      .field-full, .form-note, .form-status { grid-column: auto; }
+      .field-full, .form-note { grid-column: auto; }
       .hero-actions { gap: 18px; }
       .button-primary { padding-inline: 17px; }
     }
@@ -276,7 +275,9 @@
         <p>Tell us what you have in mind and we’ll help you find a good place to begin. No pressure, just a personal consultation.</p>
         <div class="location-note"><span>Find us</span><strong>Dubai, United Arab Emirates</strong></div>
       </div>
-      <form class="booking-form reveal" id="consultation-form">
+      <form class="booking-form reveal" id="consultation-form" name="consultation" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="consultation">
+        <p hidden><label>Leave this field empty: <input name="bot-field"></label></p>
         <div class="field">
           <label for="name">Your name</label>
           <input id="name" name="name" autocomplete="name" required placeholder="Name">
@@ -296,8 +297,7 @@
           </select>
         </div>
         <button class="button-primary form-submit" type="submit">Request a consultation <span aria-hidden="true">↗</span></button>
-        <p class="form-note">This preview form does not send or store your information.</p>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="form-note">Your inquiry will be submitted to Andrew Cosmo Clinic through Netlify Forms.</p>
       </form>
     </section>
   </main>
@@ -342,11 +342,6 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-    document.querySelector('#consultation-form').addEventListener('submit', (event) => {
-      event.preventDefault();
-      const name = document.querySelector('#name').value.trim();
-      document.querySelector('#form-status').textContent = `Thank you, ${name}. This preview form does not send your request.`;
-    });
   </script>
 </body>
 </html>

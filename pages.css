@@ -64,8 +64,7 @@ button, input, select { font: inherit; }
 .field label { color: var(--accent); font-size: 11px; font-weight: 600; }
 .field input, .field select { min-height: 48px; padding: 0 13px; border: 1px solid #d5d0c4; border-radius: 0; outline: none; background: #fff; color: #171613; font-size: 13px; }
 .field input:focus, .field select:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(212, 175, 55, .2); }
-.form-note, .form-status { margin: 0; color: var(--muted); font-size: 10px; }
-.form-status { min-height: 20px; color: var(--accent); font-size: 12px; }
+.form-note { margin: 0; color: var(--muted); font-size: 10px; }
 .site-footer { background: var(--black); border-top: 1px solid var(--line); }
 .footer-inner { min-height: 104px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
 .footer-inner .brand-name small, .footer-link { color: var(--accent); }
@@ -93,5 +92,5 @@ button, input, select { font: inherit; }
 }
 @media (max-width: 420px) {
   .contact-form { grid-template-columns: 1fr; }
-  .field-full, .form-note, .form-status { grid-column: auto; }
+  .field-full, .form-note { grid-column: auto; }
 }
