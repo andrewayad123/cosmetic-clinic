@@ -27,7 +27,11 @@
       <div class="contact-note">Dubai, United Arab Emirates<br><a href="mailto:andrewayad22@gmail.com">andrewayad22@gmail.com</a></div>
     </section>
 
-    <form class="contact-form" id="inquiry-form" action="mailto:andrewayad22@gmail.com" method="post" enctype="text/plain">
+    <form class="contact-form" id="inquiry-form" action="https://formsubmit.co/andrewayad22@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Yalla Digital website inquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://andrewayad123.github.io/cosmetic-clinic/thank-you.html">
+      <input type="text" name="_honey" style="display:none">
       <div class="field"><label for="full-name">Your name *</label><input id="full-name" name="fullName" autocomplete="name" required placeholder="Name"></div>
       <div class="field"><label for="business-name">Business name</label><input id="business-name" name="business" autocomplete="organization" placeholder="Your company or brand"></div>
       <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div>
@@ -48,9 +52,8 @@
         </select>
       </div>
       <div class="field field-full"><label for="message">Tell us a little about your goals *</label><textarea id="message" name="message" required placeholder="What does your business do, and what would you like your marketing to achieve?"></textarea></div>
-      <button class="button-primary field-full" type="submit">Prepare my inquiry <span class="arrow" aria-hidden="true">↗</span></button>
-      <p class="form-note">Submitting opens a prefilled email in your email app so you can review and send your inquiry. Your message is sent only when you press Send there.</p>
-      <p class="form-status field-full" id="form-status" role="status" aria-live="polite" hidden></p>
+      <button class="button-primary field-full" type="submit">Send inquiry <span class="arrow" aria-hidden="true">↗</span></button>
+      <p class="form-note">Your inquiry is delivered by FormSubmit, a third-party form processor, to Yalla Digital so we can respond. By submitting, you agree to share these details for this purpose.</p>
     </form>
   </main>
 
