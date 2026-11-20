@@ -121,7 +121,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .field { display: flex; flex-direction: column; gap: 7px; }
 .field-full, .form-note, .form-status { grid-column: 1 / -1; }
 .field label { color: #e7e5dc; font-size: 12px; font-weight: 600; }
-.field input, .field select, .field textarea { width: 100%; min-height: 47px; padding: 11px 12px; border: 1px solid rgba(243, 241, 233, .25); border-radius: 0; outline: none; background: #11120f; color: var(--white); font-size: 14px; }
+.field input, .field select, .field textarea { width: 100%; min-height: 47px; padding: 11px 12px; border: 1px solid rgba(243, 241, 233, .25); border-radius: 0; outline: none; background: #11120f; color: var(--white); font-size: 16px; }
 .field textarea { min-height: 116px; resize: vertical; }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--lime); box-shadow: 0 0 0 1px var(--lime); }
 .field select:invalid { color: #aaa99f; }
@@ -196,8 +196,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .footer-meta { order: 2; width: 100%; }
   .footer-links { gap: 14px; }
   .footer-bottom { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 12px; }
-  .mobile-cta { position: fixed; z-index: 9; right: 14px; bottom: 14px; left: 14px; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--lime); color: var(--night); font-size: 13px; font-weight: 700; box-shadow: 0 6px 25px rgba(0, 0, 0, .28); }
-  .site-footer { padding-bottom: 60px; }
+  .mobile-cta { min-height: 52px; margin: 20px 14px 14px; padding: 10px 16px; display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--lime); color: var(--night); font-size: 14px; font-weight: 700; box-shadow: 0 6px 25px rgba(0, 0, 0, .28); }
 }
 @media (max-width: 400px) {
   .hero h1 { font-size: 59px; }
