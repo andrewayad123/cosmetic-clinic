@@ -31,6 +31,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .nav-links { display: flex; align-items: center; gap: clamp(14px, 2vw, 27px); color: #d2d1c9; font-size: 11px; }
 .nav-links a, .footer-links a { transition: color .2s ease; }
 .nav-links a:hover, .nav-links a[aria-current="page"], .footer-links a:hover { color: var(--lime); }
+.nav-actions { display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+.nav-call { min-height: 44px; padding: 0 13px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--line); color: var(--white); font-size: 11px; font-weight: 600; white-space: nowrap; transition: border-color .2s ease, color .2s ease; }
+.nav-call:hover { border-color: var(--lime); color: var(--lime); }
+.nav-call-label { display: none; }
 .nav-cta, .button-primary, .button-dark { min-height: 44px; padding: 0 17px; display: inline-flex; align-items: center; justify-content: center; gap: 14px; border: 1px solid var(--lime); background: var(--lime); color: var(--night); font-size: 11px; font-weight: 700; transition: background .2s ease, color .2s ease; }
 .nav-cta:hover, .button-primary:hover { background: transparent; color: var(--lime); }
 .arrow { font-size: 16px; line-height: 1; }
@@ -136,17 +140,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .nav { gap: 16px; }
   .nav-links { gap: 13px; font-size: 10px; }
   .brand { font-size: 18px; }
-  .nav-cta { padding-inline: 12px; font-size: 10px; }
+  .nav-actions { gap: 6px; }
+  .nav-call { padding-inline: 9px; font-size: 9px; }
+  .nav-call-label { display: inline; }
+  .nav-call-number { display: none; }
+  .nav-cta { padding-inline: 10px; font-size: 9px; }
   .hero { gap: 40px; }
   .service-detail { gap: 50px; }
 }
 @media (max-width: 700px) {
   html { scroll-padding-top: 70px; }
   .wrap { width: calc(100% - 40px); }
-  .nav { min-height: 68px; gap: 12px; }
-  .brand { margin-right: auto; font-size: 20px; }
+  .nav { min-height: 68px; gap: 8px; }
+  .brand { margin-right: auto; gap: 7px; font-size: 18px; }
   .menu-toggle { display: grid; }
-  .nav-cta { display: none; }
+  .nav-actions { gap: 0; }
+  .nav-call { min-height: 40px; padding-inline: 10px; }
+  .nav-call-label { display: inline; }
+  .nav-call-number, .nav-cta { display: none; }
   .nav-links { position: absolute; top: 67px; right: 0; left: 0; display: none; padding: 8px 20px 18px; flex-direction: column; align-items: stretch; gap: 0; border-bottom: 1px solid var(--line); background: var(--night); font-size: 12px; }
   .nav-links.is-open { display: flex; }
   .nav-links a { padding: 12px 0; }
