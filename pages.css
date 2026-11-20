@@ -115,6 +115,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .contact-copy > p:not(.eyebrow) { max-width: 410px; margin: 20px 0 0; color: #b7b6ac; font-size: 13px; line-height: 1.85; }
 .contact-note { margin-top: 33px; padding-top: 19px; border-top: 1px solid var(--line); color: #deddd5; font-size: 11px; }
 .contact-note a { color: var(--lime); }
+.contact-note .contact-phone { display: inline-flex; align-items: center; gap: 6px; }
 .contact-actions { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; }
 .contact-form { padding: 29px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 14px; background: var(--night-soft); }
 .field { display: flex; flex-direction: column; gap: 7px; }
